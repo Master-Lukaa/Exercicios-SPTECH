@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financiamento</title>
+</head>
+<body>
+
+<h1 style="color: blueviolet;">Vamos calcular o seu prejú :(</h1>
+
+Insira o valor do seu carro a vista: <input id="valor_carro" type="number"><br><br>
+Insira a taxa de juros a.m (ao mês): <input id="valor_juros" type="number"><br><br>
+Insira a quantidade de parcelas: <input id="qtd_parcela" type="number"><br><br>
+
+<button onclick="calcular_preju()">Calcular prejú</button>
+
+<div id="resultado"></div>
+    
+</body>
+</html>
+
+<script>
+
+function calcular_preju(){
+
+   var valorCarro = valor_carro.value
+   var taxaJuros = valor_juros.value
+   var qtdParcela =  qtd_parcela.value
+   var termoPG = valorCarro / qtdParcela
+   var razaoPG = taxaJuros * (termoPG-1)
+
+   var porcentCarro = (valorCarro / 100) * 80
+   var totalCarro = qtdParcela * razaoPG
+   var PGfinita = 1 - (1 + taxaJuros)** - qtdParcela
+
+
+resultado.innerHTML = `Seu carro vai sair por um total de R$${totalCarro.toFixed(2)}<br> 
+Após 1 mês, ele já vai valer só <b>R$${porcentCarro.toFixed(2)}</b> <br>
+Porque comprou financiado, vai pagar o correspondente a ${PGfinita.toFixed()} carros;`
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+</script>

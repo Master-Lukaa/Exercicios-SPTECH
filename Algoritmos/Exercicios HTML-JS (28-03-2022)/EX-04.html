@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refrigerante</title>
+</head>
+<body>
+
+    <h1>Vamos Calcular seu consumo de refrigerante</h1>
+    
+    Quantas latinhas você bebe por dia? <input id="qtd_latinha" type="text"><br><br>
+
+    <button onclick="calcularRefri()">Quantos refris?</button>
+
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+function calcularRefri(){
+
+    var qtdLatinha = Number (qtd_latinha.value)
+    var ano = 365 
+    var qtdRefri = qtdLatinha * ano
+
+    resultado.innerHTML = `Você bebe ${ qtdRefri } latinhas por ano`
+
+     if(qtdLatinha >= 500){
+
+    resultado.innerHTML = `Você bebe ${ qtdRefri } latinhas por ano <br> cuide melhor da sua saúde!`
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+</head>
+<body>
+    
+<h1>Vamos calcular sua média</h1>
+
+   Insira a nota da prova de português: <input id="nota1" type="number"><br><br>
+   Insira a nota da de matemática: <input id="nota2" type="number"><br><br>
+   Insira a nota da redação: <input id="nota3" type="number"><br><br>
+
+<button onclick="calcular()">Analisar desempenho</button>
+
+<div id="resultado"></div>
+
+</body>
+</html>
+
+<script>
+
+function calcular(){
+
+var n1 =  Number (nota1.value)
+var n2 =  Number (nota2.value)
+var n3 =  Number (nota3.value)
+
+var media = (n1 + n2 + n3) /  3
+
+resultado.innerHTML = `<b>Sua média foi de ${media.toFixed(1)}</b>`
+
+if( media > 9.4){
+    resultado.innerHTML = `<b>Sua média foi de ${media.toFixed(1)} <br> Parabéns, você é fora de série! </b>`
+
+}
+
+
+
+}
+
+
+
+
+</script>

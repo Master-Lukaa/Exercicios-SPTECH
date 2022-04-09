@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguro</title>
+</head>
+<body>
+    
+    <h1>Vamos calcular seu seguro</h1>
+
+    Insira a quantidade de infrações: <input id="qtd_infra" type="number"><br><br>
+    Insira o valor do seu carro: <input id="valor_car" type="number"><br><br>
+
+    <button onclick="calcSeg()">Calcular Seguro</button>
+
+   <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+function calcSeg(){
+
+var qtdInfra = Number (qtd_infra.value)
+var valorCar = Number (valor_car.value)
+var valorSeg = valorCar * 0.015
+
+if(qtdInfra < 3){
+
+valorSeg = valorSeg  * 0.9
+
+}
+
+resultado.innerHTML = `O valor do seguro é R$${valorSeg}`
+
+
+}
+
+
+
+
+
+</script>

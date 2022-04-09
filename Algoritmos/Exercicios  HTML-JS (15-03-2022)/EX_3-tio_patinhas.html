@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tio patinhas</title>
+</head>
+<body class="bg">
+    
+<style>
+
+    .bg{
+
+
+        background-image: url(imgs/wallpaperbetter.jpg);
+        background-size: 100%;
+
+    }
+
+
+.title{
+
+    color: black;
+
+}
+
+.span1{
+
+    color: blue;
+}
+
+.span2{
+
+    color: blue;
+}
+
+
+</style>
+
+<h1 class="title">Vamos guardar dinheirooo <img src="imgs/icons8-dinheiro-100.png" width="35px" alt="dinheiro"></h1>
+
+<span class="span1"> 
+    Total guardado no cofrinho: <span id="novoValor"><u>R$ 0,00</span></u>
+</span>
+<br>
+<span class="span2"> 
+    Depósitos efetuados: <span id="novoDeposito"><u>0</u></span>
+</span>
+<br>
+
+
+<button onclick="depositar050()">Depositar 0,50</button>
+<button onclick="depositar2()">Depositar 2,00</button>
+
+
+</body>
+</html>
+
+<script>
+
+var novo_valor = 0
+
+var dep_50_centavos = 0.50
+var dep_2_reais = 2
+
+var novo_deposito = 0 
+var dep_realizados = 1
+
+function depositar050(){
+
+    novo_valor =  novo_valor + dep_50_centavos 
+    novoValor.innerHTML =  novo_valor.toLocaleString("pt-br",{
+        style: "currency",
+        currency: "BRL"
+    })
+
+    novo_deposito = novo_deposito + dep_realizados
+    novoDeposito.innerHTML = novo_deposito
+   
+
+
+}
+
+function depositar2(){
+
+novo_valor =  novo_valor + dep_2_reais
+novoValor.innerHTML =  novo_valor.toLocaleString("pt-br",{
+        style: "currency",
+        currency: "BRL"
+    }) 
+
+novo_deposito = novo_deposito + dep_realizados
+novoDeposito.innerHTML = novo_deposito
+
+
+
+}
+
+</script>

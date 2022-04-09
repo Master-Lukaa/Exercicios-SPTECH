@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desempenho</title>
+</head>
+<body>
+    
+<h1>Vamos analizar o seu desempenho</h1>
+
+Insira o número de partidas jogadas: <input id="qtd_partidas" type="number"><br><br>
+Insira a quantidade de gols: <input id="qtd_gols" type="number"><br><br>
+
+<button onclick="analisar()">Estudar atacante</button> <br><br>
+
+<div id="img"></div>
+<div id="frase"></div>
+
+</body>
+</html>
+
+<script>
+
+function analisar(){
+
+var qPartida = Number (qtd_partidas.value)
+var qGol = Number (qtd_gols.value)
+var mediaJogador = qGol / qPartida
+
+
+     if (mediaJogador >= 0.2) {
+
+        img.innerHTML = `<div><b>Atacante mediano<br>
+         </b></div><img style="width: 200px"src="img/jogadormedio.jpg" alt="mediano">`
+        frase.innerHTML = `Sua média de gols/partida é de ${mediaJogador.toFixed(1)}`
+       
+
+        if(mediaJogador >= 0.6 ) {
+
+            img.innerHTML = `<div><b>Atacante de futuro<br>
+            </b></div><img style="width: 200px"src="img/jogadorbom.jpg" alt="bom">`
+            frase.innerHTML = `Sua média de gols/partida é de ${mediaJogador.toFixed(1)}`
+     
+        } 
+
+    }else{
+
+    img.innerHTML = `<div><b>Melhor mudar de posição<br>
+         </b></div><img style="width: 200px;" src="img/jogadorruim.jpg" alt="ruim"> `
+    frase.innerHTML = `Sua média de gols/partida é de ${mediaJogador.toFixed(1)}`
+
+    
+}
+
+
+}
+
+
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura</title>
+</head>
+<body>
+    
+    Temperatura: <input id="input_temperatura"><br><br>
+    <button onclick="verificar_temperatura()">
+        Verificar Temperatura
+    </button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+
+<script>
+
+function verificar_temperatura(){
+
+ var temp = Number(input_temperatura.value)
+
+ 
+if (temp < 14) {
+    
+    div_resultado.innerHTML = `Congelante`
+
+} else if(temp > 31) {
+    
+    div_resultado.innerHTML = `Calor escaldante`
+
+} else if (temp < 21) {
+    
+    div_resultado.innerHTML = `Com Frio`
+
+} else if (temp < 24) {
+    
+    div_resultado.innerHTML = `Confortável `
+
+} else if (temp > 24) {
+    
+    div_resultado.innerHTML = `Com Calor `
+
+}
+
+}
+
+
+
+
+
+    
+</script>

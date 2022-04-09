@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ônibus</title>
+</head>
+<body>
+    
+    <h1 style="color: blueviolet;">Cartão fidelidade (Ônibus)</h1>
+
+    <table style="background-color: rgba(77, 255, 246, 0.747)" border="2">
+        <tr>
+        <th>Viagens</th>
+        <th>Recarga</th>
+        <th>Custo da viagem(Desconto)</th>
+        <th>Valor total da carga </th>
+        </tr>
+
+        <tr>
+            <td>08</td>
+            <td>R$32,45</td>
+            <td>R$4,06</td>
+            <td>R$35,20</td>
+            
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>R$78,65</td>
+            <td>R$3,93</td>
+            <td>R$88,00</td>
+            
+        </tr>
+        <tr>
+            <td>50</td>
+            <td>R$191,41</td>
+            <td>R$3,83</td>
+            <td>R$220,00</td>
+            
+        </tr>
+    </table><br>
+
+    <h3>Quantas passagens você gostaria de comprar?</h3>
+ 
+    <button onclick="calc8()">08 passagens</button>
+    <button onclick="calc20()">20 passagens</button>
+    <button onclick="calc50()">50 passagens</button>
+
+    <div id="resultado"></div>
+<script>
+
+
+function calc8(){
+    var qtdPass8 = 8
+    var precoDec8 = 32.45
+    var precoTot8 = 35.20
+
+    var porcent1 =  ( precoTot8 - precoDec8) * 100 / precoTot8 
+    var GanharPass1 =  porcent1 / 4.40
+
+
+resultado.innerHTML = `Ao comprar <b>${qtdPass8}</b> 
+passagens, você pagou <b>${porcent1.toFixed(2)}%</b> a menos.<br> 
+É como se tivesse ganhado <b>${GanharPass1.toFixed()}</b> passagens de bônus.`
+
+}
+
+function calc20(){
+    var qtdPass8 = 20
+    var precoDec20 = 78.65
+    var precoTot20 = 88
+   
+    var porcent2 =  ( precoTot20 - precoDec20) * 100 / precoTot20
+    var GanharPass2 =  porcent2 / 4.40
+
+resultado.innerHTML = `Ao comprar <b>${qtdPass8}</b> 
+passagens, você pagou <b>${porcent2.toFixed(2)}%</b> a menos.<br> 
+É como se tivesse ganhado <b>${GanharPass2.toFixed()}</b> passagens de bônus.`
+
+}
+
+function calc50(){
+    var qtdPass50 = 50
+    var precoDec50 = 191.41
+    var precoTot50 = 220
+
+    var porcent3 =  ( precoTot50 - precoDec50) * 100 / precoTot50
+    var GanharPass3 =  porcent3 / 4.40
+
+resultado.innerHTML = `Ao comprar <b>${qtdPass50}</b> 
+passagens, você pagou <b>${porcent3.toFixed(2)}%</b> a menos.<br> 
+É como se tivesse ganhado <b>${GanharPass3.toFixed()}</b> passagens de bônus.`
+
+}
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

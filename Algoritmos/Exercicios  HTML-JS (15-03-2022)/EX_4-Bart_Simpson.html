@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Os Simpsons</title>
+</head>
+<body class="bg">
+
+    <style>
+
+ .bg{
+
+    background-image: url(imgs/462942.jpg);
+    background-size: 100%;
+
+
+
+        }
+
+.titulo{
+color: white;
+margin-left: 40%;
+
+
+}
+
+.input{
+
+align-items: center;
+margin-left: 30%;
+color: white;
+
+
+}
+
+.img{
+
+margin-left: 40%;
+
+}
+
+
+
+</style>
+
+<h1 class="titulo">Eu sou o Bart <img src="imgs/icons8-bart-simpson-50.png"> </h1>
+
+<span class="input">
+Quantos Pixels? <input id="quantidadePX" type="text">
+<button onclick="esquerda()">Mover p/ Esquerda</button>
+<button onclick="direita()">Mover p/ Direita</button>
+</span>
+
+ <br><br>
+
+ <span class="img">
+     <img  id="img_bart" src="imgs/bart.png" width="200px" alt="bart simpson">
+ </span>
+
+
+</body>
+</html>
+
+<script>
+
+var qtd_px = 0
+
+
+
+function direita(){
+
+
+qtd_px = quantidadePX.value 
+img_bart.style.marginLeft = qtd_px + "px"
+
+img_bart.innerHTML = qtd_px 
+
+
+
+}
+
+
+function esquerda(){
+
+   
+
+    qtd_px = quantidadePX.value 
+    img_bart.style.marginLeft =- qtd_px + "px"
+    img_bart.innerHTML = qtd_px 
+  
+
+
+
+}
+
+
+
+
+
+</script>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tio patinhas</title>
+</head>
+<body>
+    
+<h1>Vamos guardar dinheiro :)</h1>
+
+<button onclick="depositar50()">Depositar 0,50</button>
+<button onclick="depositar2()">Depositar 2,00</button>
+<button onclick="retirar2()">Retirar 2,00</button>
+<button onclick="retirar050()">Retirar 0,50</button>
+
+<div id="div_resultado"></div>
+
+
+
+</body>
+</html>
+
+<script>
+
+    var saldo_atual = 0
+    var depositos = 0
+    var retiradas = 0
+
+function depositar50(){
+
+
+//saldo_atual = saldo_atual + 0.50 
+saldo_atual += 0.50
+//depositos = depositos + 1
+depositos += 1
+div_resultado.innerHTML = `Total guardado no cofrinho: R$${saldo_atual}<br> 
+Depósitos efetuados: ${depositos}`
+
+}
+
+function depositar2(){
+
+
+//saldo_atual = saldo_atual + 2 
+saldo_atual += 2
+//depositos = depositos + 1
+depositos += 1
+div_resultado.innerHTML = `Total guardado no cofrinho: R$${saldo_atual}<br> 
+Depósitos efetuados: ${depositos}`
+
+}
+
+function retirar050(){
+
+//saldo_atual = saldo_atual - 0.50
+saldo_atual -= 0.50
+//retiradas = retiradas + 1
+retiradas += 1
+div_resultado.innerHTML = `Total guardado no cofrinho: R$${saldo_atual}<br> 
+Depósitos efetuados: ${depositos}<br>
+Retiradas efetuadas: ${retiradas}
+`
+
+
+}
+
+function retirar2(){
+
+//saldo_atual = saldo_atual - 2
+saldo_atual -= 2
+//retiradas = retiradas + 1
+retiradas += 1
+div_resultado.innerHTML = `Total guardado no cofrinho: R$${saldo_atual}<br> 
+Depósitos efetuados: ${depositos}<br>
+Retiradas efetuadas: ${retiradas}
+`
+
+
+}
+
+</script>

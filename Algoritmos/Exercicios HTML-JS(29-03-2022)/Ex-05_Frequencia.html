@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequência</title>
+</head>
+<body>
+    
+   
+ 
+<h1>Vamos analisar sua frequência</h1>
+
+Insira sua frequência nas aulas de algoritmo: <input id="Alunofreq" type="number"><br><br>
+
+<button onclick="analisar()">Analisar frequência</button>
+
+<div  id="resultado"></div>
+
+</body>
+</html>
+
+<script>
+
+
+
+function analisar(){
+
+var freq = Number(Alunofreq.value)
+
+
+
+if (freq < 50) {
+
+  
+    resultado.innerHTML = `<img style="width: 400px;" src="img/turista.jpeg" alt="turista">`
+
+} else {
+    
+    resultado.innerHTML = `<img style="width: 400px;" src="img/estudioso.png" alt="estudioso">`
+
+}
+
+
+
+
+
+}
+
+
+
+</script>

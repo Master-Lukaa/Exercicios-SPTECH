@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutricionista</title>
+</head>
+<body>
+
+<h1>Vamos fazer dieta</h1>
+
+Insira a quantidade de pães que você consome no dia: <input id="paes" type="number"><br><br>
+Insira a quantidade de biscoitos recheados que você consome no dia: <input id="biscoito" type="number"><br><br>
+Insira a quantidade de copos de achocolatado que você consome no dia: <input id="chocolate" type="number"><br><br>
+
+<button onclick="verif_cal()">Verificar calorias</button>
+    
+<div id="resultado" ></div>
+
+</body>
+</html>
+
+<script>
+
+function verif_cal(){
+
+var paoCal = 50
+var biscCal = 80
+var chocoCal = 70
+
+
+var pao = Number (paes.value)
+var bisc = Number (biscoito.value)
+var choco = Number (chocolate.value)
+
+
+var calcPao = pao * paoCal
+var calcBisc = bisc * biscCal
+var calcChoco = choco * chocoCal
+
+var totalCal = calcPao + calcBisc + calcChoco
+
+
+if (totalCal < 200) {
+
+    resultado.innerHTML = `Está perdendo peso`
+    
+} else if (totalCal > 400) {
+
+    resultado.innerHTML = `Forte tendência á ganhar peso !`
+    
+} else {
+
+resultado.innerHTML = `Nem lá, nem cá. Vai manter a forma.`
+
+
+}
+
+}
+
+
+
+</script>

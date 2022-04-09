@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário</title>
+</head>
+
+<style>
+
+.div{
+
+color: blueviolet;
+
+}
+
+.title{
+
+color: blueviolet;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+</style>
+
+<body>
+
+<h1 class="title">Opaaaa de boa?</h1>
+
+  Insira o seu salário: <input id="salario"><br><br>
+  <button onclick="confirmarSalario()">Confirmar salário</button>
+  <button onclick="pagar100()">Pagar conta de 100</button>
+  <button onclick="pagar500()">Pagar conta de 500</button>
+  <button onclick="ganhar2000()">Ganhar 2000 na loteria</button>
+  <div><br>
+     <b>Grana atual: R$ </b> 
+      <div class="div" id="div_dinheiroAtual"> <b>0</b></div>
+    </div>  
+</body>
+</html>
+
+<script>
+
+var dinheiro_atual = 0
+
+function confirmarSalario() {
+    dinheiro_atual = salario.value
+    div_dinheiroAtual.innerHTML = dinheiro_atual
+}
+
+function pagar100() {
+    dinheiro_atual =  dinheiro_atual - 100
+    div_dinheiroAtual.innerHTML = dinheiro_atual
+}
+
+function pagar500() {
+    dinheiro_atual =  dinheiro_atual - 500
+    div_dinheiroAtual.innerHTML = dinheiro_atual
+}
+
+function ganhar2000() {
+    dinheiro_atual =  dinheiro_atual + 2000
+    div_dinheiroAtual.innerHTML = dinheiro_atual 
+}
+</script>
+

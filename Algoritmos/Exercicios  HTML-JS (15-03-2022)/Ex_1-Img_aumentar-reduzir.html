@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumentar e Reduzir img</title>
+
+  
+</head>
+
+<style>
+    .title{
+
+color: darkred;
+margin-left: 40%;
+
+}
+
+.brabo{
+
+ margin: 0 auto;
+ margin-left: 40%;
+}
+
+
+</style>
+<body>
+
+<h1 class="title"> O Brabo de TWD</h1>
+<br><br>
+
+<div class="brabo">
+<div class="lee"> <img id="img_lee" src="imgs/Lee.jpg" alt="lee" width="230px">
+</div>
+
+   <div> 
+    <button onclick="aumentar()"> Aumentar largura</button>
+    <button onclick="reduzir()"> Reduzir largura</button>
+  </div>
+    
+    <span style="color: white;" id="SpanLarguraAtual">230</span>
+
+</div>
+</body>
+</html>
+
+
+<script>
+
+var NovaLargura = 0
+
+function aumentar(){
+
+    NovaLargura = Number(SpanLarguraAtual.innerHTML) + 10 
+    img_lee.style.width = NovaLargura + "px"
+    SpanLarguraAtual.innerHTML = NovaLargura
+
+  
+}
+
+
+function reduzir(){
+
+NovaLargura = Number(SpanLarguraAtual.innerHTML) - 10 
+img_lee.style.width = NovaLargura + "px"
+SpanLarguraAtual.innerHTML = NovaLargura
+
+
+}
+
+
+
+</script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidade</title>
+</head>
+<body>
+    
+<h1>Vamos analisar suas habilidades</h1>
+
+    <div> Você já clicou <b><span id="resultado">0</span></b> vezes</div><br>
+    <div id="frase"></div><br>
+
+<button onclick="clicar()">Clica aqui</button>
+
+
+    
+</body>
+</html>
+
+
+<script>
+
+var qtdClique = 0
+
+function clicar(){
+
+qtdClique += 1
+resultado.innerHTML = `${qtdClique}`
+
+
+if (qtdClique < 5 ) {
+
+    frase.innerHTML = `Dedo fraquinho, hein`
+    
+} else if (qtdClique <= 10 ){
+   
+    frase.innerHTML = `Na média - não me impressiona`
+    
+}  else if (qtdClique <= 15 ){
+   
+   frase.innerHTML = `Está treinando em casa !`
+
+
+} else if (qtdClique > 15 ){
+
+    frase.innerHTML = `Mestre dos cliques !!!`
+
+}
+
+}
+
+</script>

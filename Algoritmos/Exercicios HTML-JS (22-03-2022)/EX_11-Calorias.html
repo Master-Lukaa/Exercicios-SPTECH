@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutricionista</title>
+</head>
+<body>
+
+    <h1 style="color: blueviolet;">Vamos calcular suas calorias</h1>
+
+
+    <div>Porções de pão francês: <span id="pao"><u>0</u></span></div>
+    <div>Porções de carne bovina: <span id="carnBov"><u>0</u></span></div>
+    <div>Porções de carne de soja: <span id="carnSoj"><u>0</u></span></div>
+    <div>Porções de arroz com feijão: <span id="arrozFeij"><u>0</u></span></div>
+    <div><b>Total de calorias: </b><span id="tc"><u>0</u></span> </div><br>
+   
+    <button onclick="comer1()">Comer um pão francês</button>
+    <button onclick="comer2()"> Comer porção de carne bovina</button>
+    <button onclick="comer3()">Comer porção de carne de soja</button>
+    <button onclick="comer4()">Comer porção de arroz com feijão</button><br><br>
+    <button onclick="recomecar()">Recomeçar</button>
+    
+   
+<script>
+
+var paoCal = 0
+var carnCalBov = 0
+var carnCalSoj = 0
+var arrozFeijCal = 0
+var totCal = 0
+
+
+function comer1(){
+
+paoCal += 50
+totCal += 50
+pao.innerHTML = `${paoCal}`
+tc.innerHTML = `${totCal}`
+
+}
+function comer2(){
+
+carnCalBov += 100
+totCal += 100
+carnBov.innerHTML = `${carnCalBov}`
+tc.innerHTML = `${totCal}`
+
+}
+function comer3(){
+
+carnCalSoj += 30
+totCal += 30
+carnSoj.innerHTML = `${carnCalSoj}`
+tc.innerHTML = `${totCal}`
+
+}
+function comer4(){
+
+arrozFeijCal += 120
+totCal += 120
+arrozFeij.innerHTML = `${arrozFeijCal}`
+tc.innerHTML = `${totCal}`
+
+}
+
+
+function recomecar(){
+
+    pao.innerHTML = ""
+    carnBov.innerHTML = ""
+    carnSoj.innerHTML = ""
+    arrozFeij.innerHTML = ""
+    tc.innerHTML = ""
+
+
+
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educação</title>
+</head>
+<body>
+ 
+    <h1>Descubra qual é a sua aptidão para o esporte</h1>
+    
+   Insira a a sua altura: <input id="Valtura" type="number"><br><br>
+
+<button onclick="analisar_aptidao()">Quais esportes ?</button>
+
+   <div id="resultado"></div>
+
+</body>
+</html>
+
+<script>
+
+function analisar_aptidao(){
+
+var altura = Number(Valtura.value)
+
+
+if (altura <= 1.65) {
+    resultado.innerHTML = `Você pode ser piloto de corrida`
+    resultado.style.color = "blue"
+} 
+
+else if (altura <= 1.80){ 
+resultado.innerHTML = `Você pode ser jogador de futebol`
+resultado.style.color = "green"
+
+}
+
+else if (altura >= 1.80){ 
+resultado.innerHTML = `Você pode ser jogador de vôlei ou basquete`
+resultado.style.color = "#FF7F00"
+}
+
+
+}
+
+
+
+
+
+
+
+</script>
+

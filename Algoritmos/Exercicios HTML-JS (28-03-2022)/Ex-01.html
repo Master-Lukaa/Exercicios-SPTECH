@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maçãs</title>
+</head>
+<body>
+    
+    <h1>Vamos calcular o preço das maçãs</h1>
+
+ Insira a quantidade de maçãs: <input id="qtd_macas" >
+<button onclick="calcularMaca()">Finalizar Compra</button><br>
+
+ <script>
+
+function calcularMaca(){
+
+   
+var qtdMaca = Number (qtd_macas.value)
+var precoMaca = 0.75
+var calcMaca = qtdMaca * precoMaca
+
+if(qtdMaca >= 10){
+    calcMaca = qtdMaca * 0.68}
+
+
+alert(`As maças sairam por R$${calcMaca.toFixed(2)}`)
+
+
+
+
+
+
+}
+
+
+ </script>
+</body>
+</html>

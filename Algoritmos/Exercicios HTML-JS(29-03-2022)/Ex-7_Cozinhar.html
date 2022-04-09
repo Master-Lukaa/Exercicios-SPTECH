@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozinhar</title>
+</head>
+<body>
+
+<h1>Vamos cozinhar</h1>
+
+Quanto tempo você deixou o arroz cozinhando? <input id="tempo" type="number"><br><br>
+
+<button onclick="analisarArroz()">Provar arroz</button><br><br>
+
+<div id="resultado"></div>
+    
+</body>
+</html>
+
+<script>
+
+function analisarArroz(){
+
+var tempoArroz = Number (tempo.value)
+
+if (tempoArroz == 5) {
+
+    resultado.innerHTML = `<div><b>"Parabéns! Arroz perfeito!</b></div><br>
+    <img style="width: 400px;" src="img/arrozbonito.jpg" alt="gostoso">`
+    
+} else {
+   resultado.innerHTML = `<div><b>Arroz cru ou cozido demais! </b></div><br>
+    <img style="width: 400px;" src="img/arrozqueimado.jpg" alt="queimado">` 
+
+}
+
+
+
+
+}
+
+
+
+
+
+</script>
